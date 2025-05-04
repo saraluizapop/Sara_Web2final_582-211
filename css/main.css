@@ -1,3 +1,10 @@
+:root {
+    --rouge:#A54343;
+    --noir:#0000;
+    --rougef:#512020;
+    
+  }
+
 *{
     background-color: black;
 }

@@ -2,8 +2,6 @@
     --rouge:#A54343;
     --noir:#0000;
     --rougef:#512020;
-    --Qalogre:Qalogre;
-    --Times:Times new roman;
     
   }
 @font-face {
@@ -11,7 +9,7 @@
   src: url(../assets/Qalogre.otf) format(opentype);
 }
 *{
-    background-color: black;
+    background-color: rgb(251, 0, 0);
 }
 
 /*----- Styles Généraux -----*/

@@ -1,19 +1,81 @@
 :root {
-    --rouge:#A54343;
-    --noir:#0000;
-    --rougef:#512020;
-    --Qalogre:Qalogre;
-    --Times:Times new roman;
-    
-  }
+  --rouge: #A54343;
+  --noir: #0000;
+  --rougef: #512020;
+}
+
 @font-face {
   font-family: Qalogre;
-  src: url(../assets/Qalogre.otf) format(opentype);
-}
-*{
-    background-color: black;
+  src: url(../assets/Qalogre.otf) format("opentype");
 }
 
-/*----- Styles Généraux -----*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 3707px;
+}
+/*la hauteur du conteneur qui englobe les elements de la page*/
+.background-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
 
-/*------ Section Hero ------*/
+/* L'image de fond est transparente */
+.background-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* proprietes de l'image */
+  background-image: url(../assets/images/background_swirl.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 400px -90px;
+  opacity: 0.2;
+  z-index: 0; 
+}
+
+
+/* les proprietes du .head  */
+.entete{
+  width: 100%;
+  height: 10vh;
+  background-color: var(--rouge);
+  position: relative;  
+  z-index: 1;
+  /* flkex box afin de placer le drip a la bonne place*/
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.logo{
+  position: relative;
+  z-index: 1;
+}
+.drip{
+  /*ajuster le margin top pour que le drip soit a la bonne place*/
+  position: relative;
+margin-top:45px;
+}
+
+#artotheque{
+  width: 350px;
+  transform: translate(35px, -25px);
+
+}
+
+.ink{
+  position: absolute;
+  top: -10px;       /* Adjust for visual alignment */
+  left: 20px;       /* Adjust for placement */
+  z-index: 0;       /* Lower than the logo */
+  width: 200px;     /* Adjust as needed */
+  height: auto;
+  pointer-events: none;
+}
+#splash{
+  width: 140px;
+  transform: rotate(-20deg) translate(-20px, -15px);
+}

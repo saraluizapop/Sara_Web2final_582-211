@@ -1,40 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artothèque</title>
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/styles-SLP2.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artothèque</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/catalogue.css">
+
+
 </head>
+
 <body>
-    <div class="background-wrapper">
-        <header class="entete">
-          <div class="drip">
-              <svg xmlns="http://www.w3.org/2000/svg" width="181" height="183" viewBox="0 0 181 183" fill="none">
-                  <path d="M30.4718 10.7438C33.0551 11.0668 35.2225 13.9173 37.3509 14.1834C38.1314 14.281 43.1646 16.6234 40.7904 16.763C38.969 16.8702 34.9838 15.5117 33.7203 14.3745C32.2886 13.0859 27.9711 12.1459 27.2234 10.7438C27.0817 10.4782 30.8631 12.3995 31.5228 13.1324C33.7296 15.5845 39.4053 15.7432 42.3191 16.2853C47.593 17.2665 51.8114 18.2698 54.1664 12.7502C54.5035 11.9603 54.9415 7.40158 55.5996 7.01768C56.2366 6.64607 58.1838 12.2535 58.2748 12.5592C59.104 15.3454 58.0448 20.2137 61.2366 16.2853C62.4899 14.7428 63.8892 15.0433 65.7271 15.0433" stroke="#A54343" stroke-width="13" stroke-linecap="round"/>
-                  <path d="M79 15.9568C82.4221 12.5347 85.4648 9.9795 90.0352 8.2656C92.3508 7.39726 89.8809 8.88732 89.1275 9.45988C86.2431 11.6521 85.4477 16.2947 83.1083 18.7275C78.7017 23.3105 84.4449 16.452 87.4078 15.288C91.2704 13.7705 94.6306 11.5429 97.9175 9.07771" stroke="#A54343" stroke-width="13" stroke-linecap="round"/>
-                  <path d="M67.4469 8.71977C70.5097 8.71977 73.5303 8.677 76.0458 7" stroke="#A54343" stroke-width="13" stroke-linecap="round"/>
-                  <path d="M67.4469 9.57966C85.3602 9.57966 103.044 8.71977 120.76 8.71977C122.48 8.71977 124.199 8.71977 125.919 8.71977C126.365 8.71977 121.928 9.5453 120.76 9.57966C117.207 9.68414 107.594 7.49661 110.107 10.0096C113.982 13.885 120.19 17.5161 122.671 22.4779C128.882 34.9015 120.853 11.4905 121.333 11.4905C124.119 11.4905 134.81 26.778 135.187 25.5353C136.226 22.1067 139.925 8.07748 141.206 18.7518C141.302 19.5537 141.27 24.0293 141.588 23.4334C143.805 19.2761 147.392 16.0721 149.709 12.016C151.946 8.10227 152.782 21.7363 151.286 22.3346C149.051 23.2286 154.2 10.6097 154.2 15.4078C154.2 17.3118 151.903 22.6208 152.814 20.9493C155.353 16.2954 161.143 11.8757 165.044 8.38537C169.252 4.62061 163.862 14.3557 163.563 14.9301C163.111 15.7965 156.697 27.1054 159.55 21.1403C161.545 16.9692 165.021 10.0085 169.391 7.76434C171.761 6.54729 169.178 13.0664 168.913 13.4969C165.336 19.3098 167.613 8.57377 170.06 7.23886C172.032 6.163 168.627 14.1432 171.206 10.3918C172.738 8.16414 174.106 7 176.652 7C178.731 7 180.871 8.9129 178.372 10.6306C177.021 11.5596 175.531 14.3817 174.264 15.7899C173.094 17.0898 171.415 17.4744 170.633 19.0384" stroke="#A54343" stroke-width="13" stroke-linecap="round"/>
-                  <path d="M104.64 25.5C106.034 27.5025 107.722 29.9321 109.5 32.5C113.1 37.7 116.333 49.6667 117.5 55C119.5 60.3333 123.7 72.6 124.5 79C125.5 87 124.5 95 124.5 100.5C124.5 106 125.5 112 117.5 126.5C111.1 138.1 114.833 156.333 117.5 164C120.5 169.5 128.3 180.5 135.5 180.5C144.5 180.5 154.5 182 161.5 173C168.5 164 168 148 161.5 134.5C155 121 149.5 122 151.5 100.5C153.5 79 156 71.5 157 68.5C157.8 66.1 171.667 38.8333 178.5 25.5H104.64Z" fill="#A54343"/>
-                  <path d="M1 25.5C9.5 30 12.5 32 18 39C23.5 46 23.5 46 23.5 55C23.5 62.2 19.8333 74 18 79C16.1667 81.3333 13.6 88 18 96C22.4 104 31.1667 106 35 106C39.8333 106.167 50.2 104.4 53 96C56.5 85.5 58 82 53 68.5C48 55 53 39.5 53 32.5C53 29.8334 55.8722 27.4389 59.565 25.5H1Z" fill="#A54343"/>
-                  <path d="M59.565 25.5C55.8722 27.4389 53 29.8334 53 32.5C53 39.5 48 55 53 68.5C58 82 56.5 85.5 53 96C50.2 104.4 39.8333 106.167 35 106C31.1667 106 22.4 104 18 96C13.6 88 16.1667 81.3333 18 79C19.8333 74 23.5 62.2 23.5 55C23.5 46 23.5 46 18 39C12.5 32 9.5 30 1 25.5H59.565ZM59.565 25.5C63.6272 23.3672 68.6825 21.7857 72 21H101.5C102.091 21.8436 103.211 23.4474 104.64 25.5M59.565 25.5H104.64M104.64 25.5C106.034 27.5025 107.722 29.9321 109.5 32.5C113.1 37.7 116.333 49.6667 117.5 55C119.5 60.3333 123.7 72.6 124.5 79C125.5 87 124.5 95 124.5 100.5C124.5 106 125.5 112 117.5 126.5C111.1 138.1 114.833 156.333 117.5 164C120.5 169.5 128.3 180.5 135.5 180.5C144.5 180.5 154.5 182 161.5 173C168.5 164 168 148 161.5 134.5C155 121 149.5 122 151.5 100.5C153.5 79 156 71.5 157 68.5C157.8 66.1 171.667 38.8333 178.5 25.5H104.64Z" stroke="#410B0B" stroke-width="3"/>
-                  <path d="M69.8043 9.88397C76.9877 9.88397 83.7886 8.1642 90.8237 8.1642C97.5754 8.1642 104.327 8.1642 111.079 8.1642" stroke="#A54343" stroke-width="13" stroke-linecap="round"/>
-                  <path d="M63 18.8599C69.1936 18.8599 75.5415 18 81.9175 18C88.3588 18 94.5079 18.8599 100.835 18.8599" stroke="#A54343" stroke-width="13" stroke-linecap="round"/>
-                  </svg>
-          </div>
-          <div class="logo">
-              <div class="ink">
-                <img src="./assets/images/ink_artsitique.svg" id="splash">
-              </div>
-              <img src="./assets/images/artoteque_titre.png" id="artotheque" alt="Artothèque logo">
-            </div>
-          
-        </header>
-    
 
+  <header>
+    <div class="logo">
+      <img src="./assets/images/artoteque_titre.png">
+      <div>
 
+        <div class="tiny">centre d’art visuel</div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="burger">
+      <img src="./assets/images/plus-small.svg" class="plus" alt="Menu">
+    </label>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Expositions</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Événements</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="drip"> <svg xmlns="http://www.w3.org/2000/svg" width="181" height="164" viewBox="0 0 181 164"
+        fill="none">
+        <path
+          d="M104.64 6.5C106.034 8.50247 107.722 10.9321 109.5 13.5C113.1 18.7 116.333 30.6667 117.5 36C119.5 41.3333 123.7 53.6 124.5 60C125.5 68 124.5 76 124.5 81.5C124.5 87 125.5 93 117.5 107.5C111.1 119.1 114.833 137.333 117.5 145C120.5 150.5 128.3 161.5 135.5 161.5C144.5 161.5 154.5 163 161.5 154C168.5 145 168 129 161.5 115.5C155 102 149.5 103 151.5 81.5C153.5 60 156 52.5 157 49.5C157.8 47.1 171.667 19.8333 178.5 6.5H104.64Z"
+          fill="#A54343" />
+        <path
+          d="M1 6.5C9.5 11 12.5 13 18 20C23.5 27 23.5 27 23.5 36C23.5 43.2 19.8333 55 18 60C16.1667 62.3333 13.6 69 18 77C22.4 85 31.1667 87 35 87C39.8333 87.1667 50.2 85.4 53 77C56.5 66.5 58 63 53 49.5C48 36 53 20.5 53 13.5C53 10.8334 55.8722 8.43886 59.565 6.5H1Z"
+          fill="#A54343" />
+        <path
+          d="M59.565 6.5C55.8722 8.43886 53 10.8334 53 13.5C53 20.5 48 36 53 49.5C58 63 56.5 66.5 53 77C50.2 85.4 39.8333 87.1667 35 87C31.1667 87 22.4 85 18 77C13.6 69 16.1667 62.3333 18 60C19.8333 55 23.5 43.2 23.5 36C23.5 27 23.5 27 18 20C12.5 13 9.5 11 1 6.5H59.565ZM59.565 6.5C63.6272 4.36717 68.6825 2.78573 72 2H101.5C102.091 2.84364 103.211 4.44739 104.64 6.5M59.565 6.5H104.64M104.64 6.5C106.034 8.50247 107.722 10.9321 109.5 13.5C113.1 18.7 116.333 30.6667 117.5 36C119.5 41.3333 123.7 53.6 124.5 60C125.5 68 124.5 76 124.5 81.5C124.5 87 125.5 93 117.5 107.5C111.1 119.1 114.833 137.333 117.5 145C120.5 150.5 128.3 161.5 135.5 161.5C144.5 161.5 154.5 163 161.5 154C168.5 145 168 129 161.5 115.5C155 102 149.5 103 151.5 81.5C153.5 60 156 52.5 157 49.5C157.8 47.1 171.667 19.8333 178.5 6.5H104.64Z"
+          stroke="#410B0B" stroke-width="3" />
+      </svg> </div>
+  </header>
+  <section class="controls">
+    <div class="filter-sort">
+      <button class="filter-btn">▼ FILTRER</button>
+      <button class="sort-btn">▼ TRI PAR DÉFAUT</button>
+    </div>
+  </section>
+  
+  <section class="art-grid">
+    <div class="art-item"><img src="./assets/images/art1.jpg" alt="Artwork 1"></div>
+    <div class="art-item"><img src="./assets/images/art2.jpg" alt="Artwork 2"></div>
+    <div class="art-item"><img src="./assets/images/art3.jpg" alt="Artwork 3"></div>
+    <div class="art-item"><img src="./assets/images/art4.jpg" alt="Artwork 4"></div>
+    <div class="art-item"><img src="./assets/images/art5.jpg" alt="Artwork 5"></div>
+    <div class="art-item"><img src="./assets/images/art6.jpg" alt="Artwork 6"></div>
+  </section>
+  
+  <div class="pagination">
+    <span>1</span>
+    <span>-</span>
+    <span>2</span>
+    <span>-</span>
+    <span>3</span>
+    <span>...</span>
+  </div>
+  
+  <footer class="footer">
+    <div class="logotext">
+      <div class="mini">
+        <img src="./assets/images/logo arto.png" id="mini-logo">
+      </div>
+      <div class="medias">
+        <img src="./assets/images/facebook-176-svgrepo-com.svg" class=facebook>
+        <img src="./assets/images/instagram-svgrepo-com.svg" class=instagram>
+        <img src="./assets/images/twitter-154-svgrepo-com.svg" class="twitter">
+        <img src="./assets/images/linkedin-161-svgrepo-com.svg " class=linkedin>
+      </div>
+      <div class="links">
+        <ul class="liens">
+          <li><a href="#">FAQ / À Propos</a></li>
+          <li><a href="#">Infolettre</a></li>
+          <li><a href="#">Emploi</a></li>
+          <li><a href="#">Donner</a></li>
+        </ul>
+      </div>
+      <div class="langue">
+        Anglais | Français
+        © 2025 L'Artothèque
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

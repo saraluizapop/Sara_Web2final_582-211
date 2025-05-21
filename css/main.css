@@ -25,16 +25,17 @@ body::before {
   height: 100%;
   background-image: url(../assets/images/background_swirl.png);
   background-repeat: no-repeat;
-  background-position:350px, top;
+  background-position:400px, top;
   background-size: cover;
-  opacity: 0.15; /* Adjust the opacity here */
+  opacity: 0.5; 
   z-index: -1;
   pointer-events: none;
 }
 header {
   background-color: var(--rouge);
-  color: white;
+  width:fit-content;
   padding: 1rem;
+  width:100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,15 +92,15 @@ header {
 
 .drip {
   position: absolute;
-  right: 130px;
+  right: 180px;
   bottom: -162px;
-  /* adjusted for better alignment */
+  
   width: 50px;
-  /* bigger to better match the drip */
+  
   z-index: -1;
 }
 
-.texte {}
+
 
 .text {
 
@@ -166,6 +167,7 @@ header {
   text-align: center;
   margin-top: 3rem;
   transform: translate(-5px, 800px);
+  width:100%;
 
 }
 
@@ -248,16 +250,16 @@ a {
   display: none;
 }
 
-/* Burger styling */
+
 .burger {
-  display: flex;
+  margin-right:50px;
   align-items: center;
   cursor: pointer;
-  z-index: 1001;
-  /* on top of menu */
+  z-index: 1;
+  
 }
 
-/* Menu styling */
+
 .menu {
   display: none;
   position: absolute;
@@ -274,7 +276,7 @@ a {
 .menu ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-right: 70px;
   display: flex;
   flex-direction: row;
   gap: 0.8rem;
@@ -295,12 +297,12 @@ a {
   transform: scale(1.05);
 }
 
-/* Show menu when checkbox is checked */
+
 .menu-toggle:checked+.burger+.menu {
   display: block;
 }
 
-/* Fade animation */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -314,27 +316,47 @@ a {
 }
 
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
 
-  .menu-toggle,
-  .burger {
-    display: none;
-  }
-
-  .menu {
-    display: flex;
-    position: static;
-    flex-direction: row;
+  body {
     padding: 0;
+    background-position: center top;
+    background-size: cover;
   }
 
-  .menu li a {
-    background-color: transparent;
-    color: var(--blanc);
-    padding: 0.3rem 0.6rem;
+  header {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0.5rem;
   }
 
-  .menu li a:hover {
-    background-color: var(--rougef);
-  }
+ .gal{
+  margin-left: 200px;
+ }
 }
+
+@media (max-width:320px){
+  header {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width:100%;
+    padding: 1rem 0.5rem;
+  }
+.body{
+  width:100%;
+}
+.plus{}
+ .gal{
+  margin-left: 300px;
+ }
+ .gallery{
+  width: 350px;
+
+  transform: translate(-28px, 10px);
+}
+ }
+ .galerie{
+
+ }

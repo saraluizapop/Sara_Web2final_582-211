@@ -11,7 +11,7 @@
 }
 
 
-/* Style global du body */
+/* Style du body */
 
 
 body {
@@ -139,7 +139,7 @@ header {
   display: flex;
   gap: 2rem;/* Espace entre les liens */
 }
-
+/* Le menu qui glisse*/
 .nav ul {
   list-style: none;
   display: flex;/* EMplacement aligne et bien place*/

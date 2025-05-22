@@ -10,17 +10,21 @@
   src: url(../assets/Qalogre.otf) format("opentype");
 }
 
+
+/* Style global du body */
+
+
 body {
-  margin: 0;
+  margin: 0;/* Enlève les marges par défaut */
   font-family: 'Special Elite', monospace;
   background-color: var(--blanc);
-  gap: 50px;
+  gap: 50px;/* Espace entre éléments enfants  */
   width: auto;
 }
-
+/* Arrière-plan swirl*/
 body::before {
   content: "";
-  position: fixed;
+  position: fixed; /* Ne bouge pas au scroll */
   top: 0;
   left: 0;
   width: 100%;
@@ -30,36 +34,37 @@ body::before {
   background-position:700px, top;
   background-size: cover;
   opacity: 0.15;
-  z-index: -1;
-  pointer-events: none;
+  z-index: -1;/* Sous tout le contenu */
+  pointer-events: none;/* Ne bloque pas les clics */
 }
-
+/* Header  */
 header {
   background-color: var(--rouge);
 
   color: white;
 
-  padding: 1rem;
+  padding: 1rem;/* Espacement intérieur */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between;/* Logo à gauche, menu à droite */
+  align-items: center;/* Centré verticalement */
   overflow: hidden;
   position: relative;
   width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box;/* Padding inclus dans largeur */
 }
-
+/* Logo Artotheque*/
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-
+/* Décoration artistique derrière le logo */
 .logo::after {
   content: '';
   position: absolute;
+  /* positionnement du ink derriere le logo ARtotheque*/
   top: 0;
   right: 150px;
   width: 100%;
@@ -79,20 +84,21 @@ header {
   margin-right: 10px;
 }
 
+/* Petit texte Centre d'art */
 .tiny {
   font-size: 0.9rem;
   color: #f1b6b6;
   font-style: italic;
   transform: translate(-60px, 30px);
 }
-
-
+/* Menu de navigation  */
+/* Menu hamburger (mobile) */
 .nav-toggle {
-  display: none;
+  display: none;/* Cache la case à cocher */
 }
 
 
-.nav-toggle-label {
+.nav-toggle-label {/* Affiché seulement en mobile */
   display: none;
   width: 30px;
   height: 22px;
@@ -104,13 +110,13 @@ header {
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  display: block;
+  display: block;/* On affiche les éléments comme des blocs (ça les empêche d'être sur la même ligne) */
   background: var(--blanc);
-  position: absolute;
+  position: absolute;/* Permet de les placer précisément les uns par rapport aux autres */
   height: 4px;
-  width: 100%;
+  width: 100%;/* Elles prennent toute la largeur du parent */
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;/*  ANimation qui Rend les changements  fluides */
 }
 
 .nav-toggle-label span {
@@ -131,12 +137,12 @@ header {
 
 .nav {
   display: flex;
-  gap: 2rem;
+  gap: 2rem;/* Espace entre les liens */
 }
 
 .nav ul {
   list-style: none;
-  display: flex;
+  display: flex;/* EMplacement aligne et bien place*/
   gap: 2rem;
   padding: 0;
   margin: 0;
@@ -148,20 +154,20 @@ header {
   font-family: 'Special Elite', monospace;
   font-weight: 600;
   padding: 0.5rem 0;
-  transition: color 0.3s;
+  transition: color 0.3s;/* Effet au survol */
 }
 
 .nav ul li a:hover {
-  color: #731010;
+  color: #731010;/* Rouge plus foncé au survol */
 }
 
-
+/* Menu responsive (mobile) */
 @media (max-width: 768px) {
   .nav-toggle-label {
     display: block;
   }
 
-  .nav {
+  .nav {/* Style du menuu hamburger pour menu. (J'ai failli mourir en faisant ca)*/
     position: fixed;
     top: 60px; 
     right: 0;
@@ -182,13 +188,13 @@ header {
     gap: 1.5rem;
   }
 
-  .nav-toggle:checked ~ .nav {
+  .nav-toggle:checked ~ .nav {/* Fait apparaître le menu */
     transform: translateX(0);
   }
 
 
   .nav-toggle:checked + .nav-toggle-label span {
-    background: transparent;
+    background: transparent;/* Cache la barre centrale */
   }
 
   .nav-toggle:checked + .nav-toggle-label span::before {
@@ -245,7 +251,7 @@ header {
   border-radius: 4px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
-
+/* Style du texte au debut de la page */
 .intro {
   font-family: Georgia, 'Times New Roman', Times, serif;
   height: auto;
@@ -253,15 +259,15 @@ header {
   padding: 1rem;
 }
 
-.gal {
+.gal {/*petit image dans le carre de galerie*/
   width: 100%;
   max-width: 705px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-
-.footer {
+/*Footer*/
+.footer {/* style du footer*/
   background-image: url(../assets/images/footer_detail.png);
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -273,7 +279,7 @@ header {
 
 }
 
-.liens {
+.liens {/* STyle des liens dans le footer*/
   list-style: none;
   padding: 0;
   margin: 2rem auto;
@@ -289,7 +295,7 @@ a {
   text-decoration: none;
 }
 
-.liens li a:hover {
+.liens li a:hover {/* Animation au hover des liens dans le footer*/
   color: var(--blanc);
    opacity: 0;
   animation: fadeLink 1s ease forwards;
@@ -312,7 +318,7 @@ a {
   width: 230px;
 }
 
-.medias {
+.medias {/* Flex box pour positionner adequatement les logos medias sociaux*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -326,13 +332,13 @@ a {
 }
 
 .langue:hover {
-  color: white;
+  color: white;/*Changement de couleur au survol*/
 }
 
-.instagram, .facebook, .twitter, .linkedin {
+.instagram, .facebook, .twitter, .linkedin {/* Redimensionnement des logos de medias sociaux*/
   width: 40px;
 }
-
+/* Animations */
 
 @keyframes fadeLink {
   0% {
@@ -368,12 +374,12 @@ a {
   }
 }
 
-.logo-img {
+.logo-img {/* Proprietes pour l'animation avec des Keyframes*/
   animation: float 4s ease-in-out infinite;
   transition: transform 0.3s ease;
   z-index: 2;
 }
-
+/* Responsve en mobile*/
 @media (min-width: 768px) {
 
   .menu-toggle,

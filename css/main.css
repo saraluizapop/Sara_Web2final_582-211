@@ -27,15 +27,18 @@ body::before {
   height: 100%;
   background-image: url(../assets/images/background_swirl.png);
   background-repeat: no-repeat;
-  background-position: 700px top;
+  background-position:700px, top;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.15; /* Adjust the opacity here */
   z-index: -1;
   pointer-events: none;
 }
 
 header {
   background-color: var(--rouge);
+
+  color: white;
+
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -206,11 +209,14 @@ header {
 
 .drip {
   position: absolute;
-  right: 180px;
+  right: 130px;
   bottom: -162px;
+  
   width: 50px;
+  
   z-index: -1;
 }
+
 
 .text {
   padding: 2rem;
@@ -272,10 +278,8 @@ header {
   padding: 2rem 1rem;
   text-align: center;
   margin-top: 3rem;
-  transform: none;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+  transform: translate(-5px, 0px);
+
 }
 
 .liens {
@@ -350,32 +354,28 @@ a {
   }
 }
 
-@media (max-width: 768px) {
-  .logo img {
-    width: 200px;
+
+@media (min-width: 768px) {
+
+  .menu-toggle,
+  .burger {
+    display: none;
   }
 
-  .text, .gallery, .galerie, .gal {
-    width: 90%;
-    max-width: 100%;
-    margin: 1rem auto;
-    transform: none;
+  .menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    padding: 0;
   }
 
-  .menu ul {
-    flex-direction: column;
-    align-items: center;
+  .menu li a {
+    background-color: transparent;
+    color: var(--blanc);
+    padding: 0.3rem 0.6rem;
   }
 
-  .tiny {
-    transform: translate(-30px, 0px);
-  }
-
-  .footer {
-    background-position: center bottom;
-    padding: 1rem;
-  }
-  .logo::after {
-    display:none;
+  .menu li a:hover {
+    background-color: var(--rougef);
   }
 }

@@ -1,21 +1,6 @@
-
-
-
-
-
-
-.wrapper {
-  margin-top: 105px;
-  display:flex;
-  padding: 0 1rem;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-
+/* Controls */
 .controls {
+  max-width: 1200px;
   margin: 2rem auto 1rem;
   padding: 0 1rem;
 }
@@ -24,6 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  font-family: 'Special Elite', monospace;
   font-size: 1rem;
   color: var(--noir);
 }
@@ -36,10 +22,11 @@
   padding: 0.2rem 0.5rem;
 }
 
-
+/* Art grid */
 .art-grid {
   display: grid;
   gap: 1rem;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -62,9 +49,14 @@
   object-fit: cover;
 }
 
+.art-item.placeholder {
+  background-color: #850000;
+}
+
 /* Pagination */
 .pagination {
   text-align: center;
+  font-family: 'Special Elite', monospace;
   margin: 2rem 0;
   font-size: 1rem;
   color: #900;
@@ -74,20 +66,7 @@
   margin: 0 0.2rem;
 }
 
-
-.drip {
-  margin-right:40px;
-  
-}
-
-
-
-footer .medias img {
-  width: 24px;
-  margin: 0 0.5rem;
-}
-
-/* Responsive Adjustments */
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .filter-sort {
     justify-content: center;
@@ -113,14 +92,4 @@ footer .medias img {
   .pagination {
     font-size: 0.9rem;
   }
-}
-.footers {
-  background-image: url(../assets/images/footer_detail.png);
-  background-position: 1160px bottom;
-  background-color: var(--rouge);
-  padding: 2rem 1rem;
-  text-align: center;
-  margin-top: 3rem;
-  width:100%;
-
 }

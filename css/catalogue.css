@@ -1,4 +1,4 @@
-/* Controls */
+
 .controls {
   max-width: 1200px;
   margin: 2rem auto 1rem;
@@ -22,7 +22,7 @@
   padding: 0.2rem 0.5rem;
 }
 
-/* Art grid */
+
 .art-grid {
   display: grid;
   gap: 1rem;
@@ -53,7 +53,7 @@
   background-color: #850000;
 }
 
-/* Pagination */
+
 .pagination {
   text-align: center;
   font-family: 'Special Elite', monospace;
@@ -66,7 +66,7 @@
   margin: 0 0.2rem;
 }
 
-/* Responsive tweaks */
+
 @media (max-width: 768px) {
   .filter-sort {
     justify-content: center;

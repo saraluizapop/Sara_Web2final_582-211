@@ -29,7 +29,7 @@ body::before {
   background-repeat: no-repeat;
   background-position:700px, top;
   background-size: cover;
-  opacity: 0.15; /* Adjust the opacity here */
+  opacity: 0.15;
   z-index: -1;
   pointer-events: none;
 }
@@ -353,7 +353,23 @@ a {
     transform: translateY(0);
   }
 }
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
+.logo-img {
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
 
 @media (min-width: 768px) {
 

@@ -1,13 +1,13 @@
 
 .controls {
-  max-width: 1200px;
+  max-width: 1200px;/* La largeur ne dépasse pas 1200px */
   margin: 2rem auto 1rem;
   padding: 0 1rem;
 }
 
 .filter-sort {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;/* Les éléments sont alignés en ligne */
+  flex-wrap: wrap; /* Ils passent à la ligne si y’a pas assez de place */
   gap: 1.5rem;
   font-family: 'Special Elite', monospace;
   font-size: 1rem;
@@ -15,38 +15,38 @@
 }
 
 .filter-sort button {
-  background: none;
+  background: none;/* Pas de fond sur le bouton */
   border: none;
-  font-size: inherit;
-  cursor: pointer;
+  font-size: inherit;/* Même taille que le parent */
+  cursor: pointer;/* Le curseur change quand on passe dessus */
   padding: 0.2rem 0.5rem;
 }
 
 
 .art-grid {
-  display: grid;
+  display: grid;/* Affichage en grille */
   gap: 1rem;
-  max-width: 1200px;
+  max-width: 1200px;/* Largeur max comme les autres blocs */
   margin: 0 auto;
   padding: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));/* Fait des colonnes flexibles : au moins 180px, sinon prend le reste */
 }
 
 .art-item {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;/* Toujours carré */
   background-color: #900;
-  display: flex;
+  display: flex;/* Pour centrer l’image à l’intérieur */
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: hidden; /* Cache ce qui dépasse */
   border-radius: 6px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 .art-item img {
-  width: 100%;
+  width: 100%;/* L’image prend toute la largeur et la hauter */
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;/* L’image remplit bien sans se déformer */
 }
 
 .art-item.placeholder {
@@ -66,27 +66,27 @@
   margin: 0 0.2rem;
 }
 
-
+/* Petits écrans */
 @media (max-width: 768px) {
   .filter-sort {
-    justify-content: center;
+    justify-content: center;/* Centre les filtres */
     gap: 1rem;
     font-size: 0.95rem;
   }
 
   .art-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));    /* Les cases sont plus petites pour les petits écrans */
   }
 }
-
+/* Très petits écrans (téléphones) */
 @media (max-width: 480px) {
   .filter-sort {
-    flex-direction: column;
+    flex-direction: column;/* Les filtres s’empilent */
     align-items: flex-start;
   }
 
   .art-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));/* Encore plus petit pour s’adapter */
   }
 
   .pagination {

@@ -207,15 +207,6 @@ header {
   width: 40px;
 }
 
-.drip {
-  position: absolute;
-  right: 130px;
-  bottom: -162px;
-  
-  width: 50px;
-  
-  z-index: -1;
-}
 
 
 .text {
@@ -300,6 +291,9 @@ a {
 
 .liens li a:hover {
   color: var(--blanc);
+   opacity: 0;
+  animation: fadeLink 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .logotext {
@@ -340,7 +334,16 @@ a {
 }
 
 
-
+@keyframes fadeLink {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 @keyframes fadeIn {
